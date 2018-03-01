@@ -37,18 +37,38 @@ border-style: outset;
 border-width: 5px;
 border-color: #191970;
 }
-video
+#film
 {
 position: absolute;
 top: 450px;
-left: 570px;
+left: 400px;
 }
-audio
+#film2
+{
+position: absolute;
+top: 450px;
+left: 800px;
+}
+#drama
 {
 display: block;
-width: 320px;
+font-family: Gabriola, monospace;
+text-decoration: underline;
+font-size: 30px;
+color: black;
+font-style: italic;
+font-weight: bold;
+position: absolute;
+top: 165px;
+left: 700px;
+
+}
+#music
+{
+display: block;
+width: 340px;
 height: 40px;
 position: absolute;
-top: 380px;
-left: 570px;
+top: 275px;
+left: 610px;
 }
