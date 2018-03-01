@@ -1,10 +1,12 @@
-h1
+#fme
 {
 font-family: Mistral, serif;
 font-size: 70px;
 color: #191970;
 font-style: italic;
 font-weight: bold;
+width: 700px;
+height: 100px;
 }
 h2
 {
@@ -40,13 +42,13 @@ border-color: #191970;
 #film
 {
 position: absolute;
-top: 450px;
+top: 425px;
 left: 400px;
 }
 #film2
 {
 position: absolute;
-top: 450px;
+top: 425px;
 left: 800px;
 }
 #drama
@@ -59,7 +61,7 @@ color: black;
 font-style: italic;
 font-weight: bold;
 position: absolute;
-top: 165px;
+top: 120px;
 left: 700px;
 
 }
@@ -69,6 +71,6 @@ display: block;
 width: 340px;
 height: 40px;
 position: absolute;
-top: 275px;
+top: 235px;
 left: 610px;
 }
