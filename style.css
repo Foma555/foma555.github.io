@@ -10,7 +10,7 @@ src: url("media/Gabriola.ttf");
 }
 h1
 {
-font-family: Mistral, serif;
+font-family: Mistral, monospace;
 font-size: 70px;
 color: #191970;
 font-style: italic;
