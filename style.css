@@ -1,7 +1,7 @@
 @font-face
 {
-font-family: Mis;
-src: url("media/Mis.ttf");
+font-family: Mistral;
+src: url("media/Mistral.ttf");
 }
 @font-face
 {
@@ -10,7 +10,7 @@ src: url("media/Gabriola.ttf");
 }
 h1
 {
-font-family: Mis, serif;
+font-family: Mistral, serif;
 font-size: 70px;
 color: #191970;
 font-style: italic;
