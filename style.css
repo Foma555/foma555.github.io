@@ -1,12 +1,12 @@
 @font-face
 {
 font-family: Mistral;
-src: url("media/Mistral.ttf");
+src: url("fonts/Mistral.ttf");
 }
 @font-face
 {
 font-family: Gabriola;
-src: url("media/Gabriola.ttf");
+src: url("fonts/Gabriola.ttf");
 }
 h1
 {
