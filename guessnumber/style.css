@@ -10,7 +10,7 @@ body
     background:url("media/фон.jpg") no-repeat;
 	text-align: center;
 	font-size: 70px;
-	background-size: cover;
+	background-size: cover auto auto;
 }
 
 p
@@ -22,10 +22,9 @@ p
 
 #fon
 {
-   height: 100%;
    background-color: #fff;
    width: 670px;
-   height:600px;
+   height:598px;
    margin: 0 auto;
    border-radius: 35px;
 }
