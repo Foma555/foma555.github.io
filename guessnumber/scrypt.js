@@ -14,21 +14,22 @@ playGame();
 }
 function playGame()
 {
-playersGuess = parseInt(input.value);
-if(playersGuess > mysteryNumber)
-{
-output.innerHTML = "Слишком большое";
-}
-else if(playersGuess < mysteryNumber)
-{
-output.innerHTML = "Слишком маленькое";
-}
-else if (playersGuess === mysteryNumber)
-{
-output.innerHTML = "Вы угадали!";
-}
-else
-{
-output.innerHTML = "Вы ввели хрень!";
-}
+	playersGuess = parseInt(input.value);
+	console.log(playersGuess);
+	if(playersGuess > mysteryNumber)
+	{
+		output.innerHTML = "Слишком большое";
+	}
+	else if(playersGuess < mysteryNumber)
+	{
+		output.innerHTML = "Слишком маленькое";
+	}
+	else if (playersGuess === mysteryNumber)
+	{
+		output.innerHTML = "Вы угадали!";
+	}
+	else
+	{
+		output.innerHTML = "Вы ввели хрень!";
+	}	
 }
