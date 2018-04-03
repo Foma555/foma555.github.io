@@ -7,7 +7,7 @@ src: url("fonts/Gabriola.ttf");
 body
 {
 	font-family: Gabriola;
-    background:url("media/фон.jpg");
+    background:url("media/фон.jpg") no-repeat;
 	text-align: center;
 	font-size: 70px;
 	background-size: cover;
