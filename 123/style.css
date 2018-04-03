@@ -1,0 +1,23 @@
+@font-face
+{
+font-family: Gabriola;
+src: url("fonts/Gabriola.ttf");
+}
+
+body
+{
+	font-family: Gabriola;
+    background:url("media/фон.jpg");
+	text-align: center;
+	font-size: 70px;
+}
+
+#fon
+{
+   height: 100%;
+   background-color: #fff;
+   width: 670px;
+   height:600px;
+   margin: 0 auto;
+   border-radius: 35px;
+}
