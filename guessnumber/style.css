@@ -10,6 +10,7 @@ body
     background:url("media/фон.jpg");
 	text-align: center;
 	font-size: 70px;
+	background-size: cover;
 }
 
 p
