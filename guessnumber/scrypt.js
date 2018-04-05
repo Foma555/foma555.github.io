@@ -1,19 +1,31 @@
-//Переменные игры
-var mysteryNumber = 50;
+
+var mysteryNumber = Math.floor(Math.random() * 100);
+console.log(mysteryNumber);
 var playersGuess = 0;
 var guessesRemaining = 10;
 var guessesMade = 0;
 var gameState = "";
-//Поля ввода и вывода
+var gameWon = false;
+
 var input = document.querySelector("#input");
 var output = document.querySelector("#output");
-//Кнопка
+
 var button = document.querySelector("button");
 button.style.cursor = "pointer";
 button.addEventListener("click", clickHandler, false);
+window.addEventListener("keydown", keydownHandler, false);
+function keydownHandler(event)
+{
+if(event.keyCode === 13)
+{
+playGame();
+input.value="";
+}
+}
 function clickHandler()
 {
 playGame();
+input.value="";
 }
 function playGame()
 {
@@ -24,18 +36,56 @@ function playGame()
 	console.log(playersGuess);
 	if(playersGuess > mysteryNumber)
 	{
-		output.innerHTML = "Слишком большое." + gameState;
+		output.innerHTML = "Перебор" + gameState;
+    if (guessesRemaining < 1)
+        {
+        endGame();
+        }
 	}
 	else if(playersGuess < mysteryNumber)
 	{
-		output.innerHTML = "Слишком маленькое" + gameState;
+		output.innerHTML = "Нужно больше" + gameState;
+    if (guessesRemaining < 1)
+        {
+        endGame();
+        }
 	}
 	else if (playersGuess === mysteryNumber)
-	{
-		output.innerHTML = "Вы угадали!";
-	}
+	    {
+		gameWon = true;
+        endGame();;
+	    }
 	else
 	{
 		output.innerHTML = "Вы ввели хрень!" + gameState;
-	}	
+		if (guessesRemaining < 1)
+        {
+        endGame();
+        }
+		
+	}
+   render();	
+}
+function endGame()
+{
+if (gameWon)
+{
+output.innerHTML
+= mysteryNumber +  " - это успех! " + "<br>" + "Количество попыток: " + guessesMade + ".";
+}
+else
+{
+output.innerHTML
+= "Попыток больше нет. Вы проиграли!" + "<br>"
++ "Было загадано число " + mysteryNumber + ".";
+}
+button.removeEventListener("click", clickHandler, false);
+button.disabled = true;
+window.removeEventListener("keydown", keydownHandler, false);
+input.placeholder = "Конец игры!";
+input.disabled = true;
+}
+function render()
+{
+arrow.style.left = playersGuess * 3 + "px";
 }

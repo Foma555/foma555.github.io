@@ -1,13 +1,13 @@
 @font-face
 {
-font-family: Gabriola;
-src: url("fonts/Gabriola.ttf");
+    font-family: Gabriola;
+    src: url("fonts/Gabriola.ttf");
 }
 
 body
 {
 	font-family: Gabriola;
-        background:url("media/фон.jpg") no-repeat;
+    background:url("media/фон.jpg") no-repeat;
 	text-align: center;
 	font-size: 70px;
 }
@@ -21,9 +21,29 @@ p
 
 #fon
 {
-   background-color: #fff;
-   width: 670px;
-   height:598px;
-   margin: 0 auto;
-   border-radius: 35px;
+    background-color: #fff;
+    width: 670px;
+    height:598px;
+    margin: 0 auto;
+    border-radius: 35px;
+}
+
+button
+{
+font-family: Arial, Helvetica, sans-serif;
+font-size: 14px;
+color: #fff;
+padding: 10px 20px;
+cursor: pointer;
+border-radius: 6px;
+background:-webkit-linear-gradient(top, #a3a3a3, #000);
+-webkit-user-select: none;
+}
+button:hover
+{
+background: -webkit-linear-gradient(top, #87CEFA, #4682B4);
+}
+button:active
+{
+background: -webkit-linear-gradient(top, #87CEEB, #F0FFFF);
 }
