@@ -4,6 +4,11 @@
     src: url("fonts/Gabriola.ttf");
 }
 
+input
+{
+font-size: 25px;
+}
+
 body
 {
 	font-family: Gabriola;
@@ -16,7 +21,7 @@ p
 {
     font-family: Arial;
     text-align: center;
-	font-size: 20px;
+	font-size: 25px;
 }
 
 #fon
@@ -31,7 +36,7 @@ p
 button
 {
 font-family: Arial, Helvetica, sans-serif;
-font-size: 14px;
+font-size: 20px;
 color: #fff;
 padding: 10px 20px;
 cursor: pointer;
@@ -47,3 +52,34 @@ button:active
 {
 background: -webkit-linear-gradient(top, #87CEEB, #F0FFFF);
 }
+
+/*Свойства прямоугольника, содержащего шкалу и стрелку*/
+#stage
+{
+width: 632px;
+height: 162px;
+}
+/*Свойства шкалы*/
+#scale
+{
+width: 632px;
+height: 162px;
+position: absolute;
+top: 400px;
+left: 315px;
+background-image: url(media/линейка.jpg);
+}
+
+/*Свойства стрелки*/
+#arrow
+{
+width: 31px;
+height: 52px;
+position: absolute;
+top: 348px;
+left: 312px;
+background-image: url(media/стрелка.jpg);
+/*Transition*/
+-webkit-transition: left 0.5s ease-out 0s;
+-moz-transition: left 0.5s ease-out 0s;
+transition: left 0.5s ease-out 0s;

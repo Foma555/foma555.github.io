@@ -9,6 +9,7 @@ var gameWon = false;
 
 var input = document.querySelector("#input");
 var output = document.querySelector("#output");
+var arrow = document.querySelector("#arrow");
 
 var button = document.querySelector("button");
 button.style.cursor = "pointer";
@@ -31,7 +32,7 @@ function playGame()
 {
 	guessesRemaining -= 1;
     guessesMade += 1;
-    gameState = " Сделано попыток: " + guessesMade + ". Осталось: " + guessesRemaining + ".";
+    gameState = " cделано попыток: " + guessesMade + ". Осталось: " + guessesRemaining + ".";
 	playersGuess = parseInt(input.value);
 	console.log(playersGuess);
 	if(playersGuess > mysteryNumber)
@@ -53,7 +54,7 @@ function playGame()
 	else if (playersGuess === mysteryNumber)
 	    {
 		gameWon = true;
-        endGame();;
+        endGame();
 	    }
 	else
 	{
@@ -87,5 +88,5 @@ input.disabled = true;
 }
 function render()
 {
-arrow.style.left = playersGuess * 3 + "px";
+arrow.style.left = playersGuess * 6 + 312 + "px";
 }
