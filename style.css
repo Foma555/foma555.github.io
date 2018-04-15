@@ -82,3 +82,17 @@ position: absolute;
 top: 275px;
 left: 610px;
 }
+
+#game
+{
+	display: block;
+font-family: Gabriola, monospace;
+text-decoration: underline;
+font-size: 30px;
+color: black;
+font-style: italic;
+font-weight: bold;
+position: absolute;
+top: 165px;
+left: 1000px;
+}

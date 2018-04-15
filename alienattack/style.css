@@ -1,0 +1,52 @@
+body
+{
+	background-color: #000029;
+}
+h1
+{
+	background-color: #ff8243;
+	text-align: center;
+}
+#stage
+{
+width: 757px;
+height: 473px;
+position: relative;
+}
+#background
+{
+width: 757px;
+height: 473px;
+position: absolute;
+top: 50px;
+left: 250px;
+background-image: url(media/космос.png);
+}
+#cannon
+{
+width: 100px;
+height: 63px;
+position: absolute;
+top: 450px;
+left: 600px;
+background-image: url(media/инс.png);
+}
+
+#alien
+{
+width: 70px;
+height: 80px;
+position: absolute;
+top: 50px;
+left: 600px;
+background-image: url(media/пришелец.png);
+}
+#missile
+{
+width: 40px;
+height: 39px;
+position: absolute;
+top: 425px;
+left: 625px;
+background-image: url(media/огонь.png);
+}
