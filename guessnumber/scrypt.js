@@ -32,12 +32,12 @@ function playGame()
 {
 	guessesRemaining -= 1;
     guessesMade += 1;
-    gameState = " cделано попыток: " + guessesMade + ". Осталось: " + guessesRemaining + ".";
+    gameState = " Cделано попыток: " + guessesMade + ". Осталось: " + guessesRemaining + ".";
 	playersGuess = parseInt(input.value);
 	console.log(playersGuess);
 	if(playersGuess > mysteryNumber)
 	{
-		output.innerHTML = "Перебор" + gameState;
+		output.innerHTML = "Перебор!" + "<br>" + gameState;
     if (guessesRemaining < 1)
         {
         endGame();
@@ -45,7 +45,7 @@ function playGame()
 	}
 	else if(playersGuess < mysteryNumber)
 	{
-		output.innerHTML = "Нужно больше" + gameState;
+		output.innerHTML = "Нужно больше!" + "<br>" + gameState;
     if (guessesRemaining < 1)
         {
         endGame();
@@ -58,7 +58,7 @@ function playGame()
 	    }
 	else
 	{
-		output.innerHTML = "Вы ввели хрень!" + gameState;
+		output.innerHTML = "Вы ввели хрень!" + "<br>" + gameState;
 		if (guessesRemaining < 1)
         {
         endGame();
