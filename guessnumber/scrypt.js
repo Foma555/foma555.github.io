@@ -77,8 +77,7 @@ output.innerHTML
 else
 {
 output.innerHTML
-= "Попыток больше нет. Вы проиграли!" + "<br>"
-+ "Было загадано число " + mysteryNumber + ".";
+= "Попыток больше нет. Вы проиграли!" + "<br>" + "Было загадано число " + mysteryNumber + ".";
 }
 button.removeEventListener("click", clickHandler, false);
 button.disabled = true;
