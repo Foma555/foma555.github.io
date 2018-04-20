@@ -65,7 +65,7 @@ height: 162px;
 width: 632px;
 height: 162px;
 position: absolute;
-top: 400px;
+top: 315px;
 left: 180px;
 background-image: url(media/линейка.jpg);
 }
@@ -76,7 +76,7 @@ background-image: url(media/линейка.jpg);
 width: 31px;
 height: 52px;
 position: absolute;
-top: 348px;
+top: 312px;
 left: 178px;
 background-image: url(media/стрелка.jpg);
 /*Transition*/
