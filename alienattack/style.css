@@ -30,8 +30,8 @@ margin: 0 auto;
 		height: 57px;
 		display: block;
 		position: absolute;
-		top: 0;
-		left: 270px;
+		top: 0px;
+		left: 280px;
 		background-image: url(media/пришелец.png);
 		}
 
@@ -41,8 +41,8 @@ margin: 0 auto;
 		height: 39px;
 		display: block;
 		position: absolute;
-		top: 350;
-		left: 270px;
+		top: 310px;
+		left: 280px;
 		background-image: url(media/огонь.png);
 		}
 
@@ -52,7 +52,7 @@ margin: 0 auto;
 		height: 44px;
 		display: block;
 		position: absolute;
-		top: 400;
+		top: 360px;
 		left: 270px;
 		background-image: url(media/инс.png);
 		}
