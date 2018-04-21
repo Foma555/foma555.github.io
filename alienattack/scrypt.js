@@ -1,4 +1,4 @@
-var alienX = Math.floor(Math.random() * 700);
+var alienX = Math.floor(Math.random() * 530);
 var alienY = 20;
 var guessX = 0;
 var guessY = 0;
@@ -57,11 +57,11 @@ guessY = parseInt(inputY.value);
 
 //Анализ: Находятся ли введенные игроком
 //координаты X и Y внутри области цели
-if(guessX >= alienX && guessX <= alienX + 70)
+if(guessX >= alienX && guessX <= alienX + 50)
 {
 //В горизонтальном направлении X находятся,
 //теперь проверим вертикальное направление Y
-if(guessY >= alienY && guessY <= alienY + 80)
+if(guessY >= alienY && guessY <= alienY + 57)
 {
 //Совпадение по обоим направлениям, т.е. цель поражена!
 gameWon = true;
@@ -81,10 +81,10 @@ endGame();
 if(!gameWon)
 {
 //Изменение координаты X пришельца
-alienX = Math.floor(Math.random() * 700);
+alienX = Math.floor(Math.random() * 530);
 //Добавим 30 к координате Y, чтобы новая позиция
 //пришельца стала ниже и приблизилась к земле
-alienY += 30;
+alienY += 35;
 }
 //Обновление отображения нового состояния игры
 render(); console.log("X: " + alienX);
