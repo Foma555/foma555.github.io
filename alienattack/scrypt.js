@@ -10,6 +10,7 @@ var gameWon = false;
 var cannon = document.querySelector("#cannon");
 var alien = document.querySelector("#alien");
 var missile = document.querySelector("#missile");
+var explosion = document.querySelector("#explosion");
 
 var inputX = document.querySelector("#inputX");
 var inputY = document.querySelector("#inputY");
@@ -32,21 +33,42 @@ inputY.value="";
 
 function render()
 {
-//Позиция пришельца
 alien.style.left = alienX + "px";
 alien.style.top = alienY + "px";
-//Позиция орудия
 cannon.style.left = guessX + "px";
-//Позиция ракеты
 missile.style.left = guessX + "px";
 missile.style.top = guessY + "px";
 }
+
 function clickHandler()
 {
-playGame();
+ validateInput();
 inputX.value="";
 inputY.value="";
 }
+
+function validateInput()
+{
+guessX = parseInt(inputX.value);
+guessY = parseInt(inputY.value);
+if(isNaN(guessX) || isNaN(guessY))
+{
+output.innerHTML = "Вы ввели хрень!";
+}
+else if(guessX > 530 || guessX < 0)
+{
+output.innerHTML = "Вы ввели хрень!";
+}
+else if(guessY > 350 || guessY < 0)
+{
+output.innerHTML = "Вы ввели хрень!";
+}
+else
+{
+playGame();
+}
+}
+
 function playGame()
 {
 shotsRemaining -= 1;
@@ -54,16 +76,10 @@ shotsMade += 1;
 gameState = "<br>Выстрелы: " + shotsMade + ". Осталось: "+ shotsRemaining + ".";
 guessX = parseInt(inputX.value);
 guessY = parseInt(inputY.value);
-
-//Анализ: Находятся ли введенные игроком
-//координаты X и Y внутри области цели
 if(guessX >= alienX && guessX <= alienX + 50)
 {
-//В горизонтальном направлении X находятся,
-//теперь проверим вертикальное направление Y
 if(guessY >= alienY && guessY <= alienY + 57)
 {
-//Совпадение по обоим направлениям, т.е. цель поражена!
 gameWon = true;
 endGame();
 }
@@ -71,36 +87,45 @@ endGame();
 else
 {
 output.innerHTML = "Мимо!" + gameState;
-//Проверка на конец игры
+inputX.placeholder = "(0-530)";
+inputY.placeholder = "(0-350)";
 if (shotsRemaining < 1)
 {
 endGame();
 }
 }
-//Изменение позиции пришельца, если игра еще не выиграна
 if(!gameWon)
 {
-//Изменение координаты X пришельца
 alienX = Math.floor(Math.random() * 530);
-//Добавим 30 к координате Y, чтобы новая позиция
-//пришельца стала ниже и приблизилась к земле
 alienY += 35;
 }
 //Обновление отображения нового состояния игры
 render(); console.log("X: " + alienX);
 console.log("Y: " + alienY);
 }
+
 function endGame()
 {
 if(gameWon)
 {
 output.innerHTML
-= "Победа! Вы спасли планету!" + "<br>"
-+ "Израсходовано ракет: " + shotsMade + ".";
+= "Победа! Вы спасли планету!" + "<br>"+ "Израсходовано ракет: " + shotsMade + ".";
+explosion.style.display = "block";
+alien.style.display = "none";
+missile.style.display = "none";
+explosion.style.left = alienX + "px";
+explosion.style.top = alienY + "px";
 }
 else
 {
 output.innerHTML
 = "Вы проиграли!" + "<br>" + "Вторжение началось!";
 }
+button.removeEventListener("click", clickHandler, false);
+button.disabled = true;
+window.removeEventListener("keydown", keydownHandler, false);
+inputX.placeholder = "Конец";
+inputX.disabled = true;
+inputY.placeholder = " игры!";
+inputY.disabled = true;
 }
