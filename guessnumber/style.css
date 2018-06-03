@@ -24,15 +24,6 @@ p
 	font-size: 25px;
 }
 
-#fon
-{
-    background-color: #fff;
-    width: 670px;
-    height:598px;
-    margin: 0 auto;
-    border-radius: 35px;
-}
-
 button
 {
 font-family: Arial, Helvetica, sans-serif;
@@ -55,18 +46,29 @@ background: -webkit-linear-gradient(top, #87CEEB, #F0FFFF);
 
 #stage
 {
-width: 632px;
-height: 162px;
+width: 670px;
+height: 598px;
 margin: 0 auto;
+}
+
+#fon
+{
+    background-color: #fff;
+    width: 670px;
+    height:598px;
+    margin: 0 auto;
+	position: absolute;
+    border-radius: 35px;
 }
 
 #scale
 {
 width: 632px;
 height: 162px;
+display: block;
 position: absolute;
 top: 400px;
-left: 345px;
+left: 18px;
 background-image: url(media/линейка.jpg);
 }
 
@@ -74,9 +76,10 @@ background-image: url(media/линейка.jpg);
 {
 width: 31px;
 height: 52px;
+
 position: absolute;
 top: 350px;
-left: 342px;
+left: 15px;
 background-image: url(media/стрелка.jpg);
 
 -webkit-transition: left 0.5s ease-out 0s;

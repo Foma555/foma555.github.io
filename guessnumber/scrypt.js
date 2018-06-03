@@ -87,5 +87,5 @@ input.disabled = true;
 }
 function render()
 {
-arrow.style.left = playersGuess * 6 + 342 + "px";
+arrow.style.left = playersGuess * 6 + 15 + "px";
 }
